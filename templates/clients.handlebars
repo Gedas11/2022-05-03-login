@@ -11,6 +11,7 @@
             <th>Telefono nr.</th>
             <th>El. pašto adresas</th>
             <th>Įmonės kodas</th>
+            <th></th>
         </thead>
         <tbody>
             {{#each parsedJson}}
@@ -21,6 +22,9 @@
                     <td>{{phone}}</td>
                     <td>{{email}}</td>
                     <td>{{vat}}</td>
+                    <td>
+                        <button class="btn btn-danger delete-button" data-id="{{@index}}">Trinti</button>
+                    </td>
                 </tr>
             {{/each}}
         </tbody>
