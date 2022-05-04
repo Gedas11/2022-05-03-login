@@ -1,2 +1,30 @@
-klientu adiministravima
-<img src="/resources/img/download.png"/> 
+<h1>Klientų administravimas</h1>
+
+<a href="/new-client" class="btn btn-primary btn-lg">Naujas klientas</a>
+
+{{#if parsedJson}}
+    <table class="table">
+        <thead>
+            <th>Įmonės pavadinimas</th>
+            <th>Vardas ir pavardė</th>
+            <th>Adresas</th>
+            <th>Telefono nr.</th>
+            <th>El. pašto adresas</th>
+            <th>Įmonės kodas</th>
+        </thead>
+        <tbody>
+            {{#each parsedJson}}
+                <tr>
+                    <td>{{company}}</td>
+                    <td>{{name}}</td>
+                    <td>{{address}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{email}}</td>
+                    <td>{{vat}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+    {{message}}
+{{/if}}
