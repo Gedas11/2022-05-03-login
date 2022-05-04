@@ -13,8 +13,8 @@ const hbs = create({ /* config */ });
 const __dirname = dirname(fileURLToPath(import.meta.url))
 //Hardkodinti prisijungimo duomenys
 const credentials = {
-  login: 'gedas11@gmail.com',
-  password: '12345'
+  login: 'vilius@bit.lt',
+  password: '1234'
 }
 //Bazinio adreso konstravimas
 const port = 3000
